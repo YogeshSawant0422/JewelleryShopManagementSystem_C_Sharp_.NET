@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EC06307A-E1FB-4DAE-988A-23186A885B00}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Jewellery_Shop_Management_System</RootNamespace>
+    <AssemblyName>Jewellery_Shop_Management_System</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Frm_Accept_Order.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Accept_Order.Designer.cs">
+      <DependentUpon>Frm_Accept_Order.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Add_New_Customer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Add_New_Customer.Designer.cs">
+      <DependentUpon>Frm_Add_New_Customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Add_New_Product_Category.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Add_New_Product_Category.Designer.cs">
+      <DependentUpon>Frm_Add_New_Product_Category.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Add_New_Product_Sub_Category.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Add_New_Product_Sub_Category.Designer.cs">
+      <DependentUpon>Frm_Add_New_Product_Sub_Category.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Add_Stock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Add_Stock.Designer.cs">
+      <DependentUpon>Frm_Add_Stock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Bill_Receipt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Bill_Receipt.Designer.cs">
+      <DependentUpon>Frm_Bill_Receipt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Login_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Login_Form.Designer.cs">
+      <DependentUpon>Frm_Login_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Manage_Order.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Manage_Order.Designer.cs">
+      <DependentUpon>Frm_Manage_Order.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Product.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Product.Designer.cs">
+      <DependentUpon>Frm_Product.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Purchase_Items.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Purchase_Items.Designer.cs">
+      <DependentUpon>Frm_Purchase_Items.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Search_Customer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Search_Customer.Designer.cs">
+      <DependentUpon>Frm_Search_Customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Start.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Start.Designer.cs">
+      <DependentUpon>Frm_Start.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Update_Customer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Update_Customer.Designer.cs">
+      <DependentUpon>Frm_Update_Customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_View_All_Customer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_View_All_Customer.Designer.cs">
+      <DependentUpon>Frm_View_All_Customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Home_MDI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home_MDI.Designer.cs">
+      <DependentUpon>Home_MDI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="panel.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Frm_Accept_Order.resx">
+      <DependentUpon>Frm_Accept_Order.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Add_New_Customer.resx">
+      <DependentUpon>Frm_Add_New_Customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Add_New_Product_Category.resx">
+      <DependentUpon>Frm_Add_New_Product_Category.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Add_New_Product_Sub_Category.resx">
+      <DependentUpon>Frm_Add_New_Product_Sub_Category.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Add_Stock.resx">
+      <DependentUpon>Frm_Add_Stock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Bill_Receipt.resx">
+      <DependentUpon>Frm_Bill_Receipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Login_Form.resx">
+      <DependentUpon>Frm_Login_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Manage_Order.resx">
+      <DependentUpon>Frm_Manage_Order.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Product.resx">
+      <DependentUpon>Frm_Product.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Purchase_Items.resx">
+      <DependentUpon>Frm_Purchase_Items.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Search_Customer.resx">
+      <DependentUpon>Frm_Search_Customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Start.resx">
+      <DependentUpon>Frm_Start.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Update_Customer.resx">
+      <DependentUpon>Frm_Update_Customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_View_All_Customer.resx">
+      <DependentUpon>Frm_View_All_Customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home_MDI.resx">
+      <DependentUpon>Home_MDI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
