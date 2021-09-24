@@ -1,0 +1,579 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EC06307A-E1FB-4DAE-988A-23186A885B00}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Jewellery_Shop_Management_System</RootNamespace>
+    <AssemblyName>Jewellery_Shop_Management_System</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Crystal_Report\Customer_Report1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Customer_Report1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Crystal_Report\Datewise_Customer_Report.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Datewise_Customer_Report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Crystal_Report\Single_Distributor_Report1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Single_Distributor_Report1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Crystal_Report\Single_Employee_Report1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Single_Employee_Report1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Crystal_Report\Stock_Report.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Stock_Report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Data_Sets\Datewise_Customer_DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Datewise_Customer_DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data_Sets\Single_Distributor_Data_Set1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Single_Distributor_Data_Set1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Crystal_Report\Single_Product_Report1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Single_Product_Report1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Data_Sets\Customer_Details_DataSet.cs">
+      <DependentUpon>Customer_Details_DataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Data_Sets\Customer_Details_DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Customer_Details_DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataRow.cs" />
+    <Compile Include="DataTable.cs" />
+    <Compile Include="Data_Sets\Single_Employee_Data_Set.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Single_Employee_Data_Set.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data_Sets\Single_Product_Data_Set.cs">
+      <DependentUpon>Single_Product_Data_Set.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Data_Sets\Single_Product_Data_Set.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Single_Product_Data_Set.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data_Sets\Stock_Data_Set.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Stock_Data_Set.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Single_Distributor_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Single_Distributor_Report.Designer.cs">
+      <DependentUpon>Frm_Single_Distributor_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows_Form\Frm_Datewise_Customer_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows_Form\Frm_Datewise_Customer_Report.Designer.cs">
+      <DependentUpon>Frm_Datewise_Customer_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows_Form\Frm_Single_Employee_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows_Form\Frm_Single_Employee_Report.Designer.cs">
+      <DependentUpon>Frm_Single_Employee_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows_Form\Frm_Single_Product_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows_Form\Frm_Single_Product_Report.Designer.cs">
+      <DependentUpon>Frm_Single_Product_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows_Form\Frm_Accept_Order.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows_Form\Frm_Accept_Order.Designer.cs">
+      <DependentUpon>Frm_Accept_Order.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows_Form\Frm_Add_Distributor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows_Form\Frm_Add_Distributor.Designer.cs">
+      <DependentUpon>Frm_Add_Distributor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows_Form\Frm_Add_Employee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows_Form\Frm_Add_Employee.Designer.cs">
+      <DependentUpon>Frm_Add_Employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows_Form\Frm_Add_New_Customer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows_Form\Frm_Add_New_Customer.Designer.cs">
+      <DependentUpon>Frm_Add_New_Customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows_Form\Frm_Add_New_Product_Category.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows_Form\Frm_Add_New_Product_Category.Designer.cs">
+      <DependentUpon>Frm_Add_New_Product_Category.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows_Form\Frm_Add_New_Product_Sub_Category.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows_Form\Frm_Add_New_Product_Sub_Category.Designer.cs">
+      <DependentUpon>Frm_Add_New_Product_Sub_Category.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows_Form\Frm_Add_Stock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows_Form\Frm_Add_Stock.Designer.cs">
+      <DependentUpon>Frm_Add_Stock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows_Form\Frm_Bill_Receipt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows_Form\Frm_Bill_Receipt.Designer.cs">
+      <DependentUpon>Frm_Bill_Receipt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows_Form\Frm_Final_Customer_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows_Form\Frm_Final_Customer_Report.Designer.cs">
+      <DependentUpon>Frm_Final_Customer_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows_Form\Frm_Login_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows_Form\Frm_Login_Form.Designer.cs">
+      <DependentUpon>Frm_Login_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows_Form\Frm_Manage_Distributor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows_Form\Frm_Manage_Distributor.Designer.cs">
+      <DependentUpon>Frm_Manage_Distributor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows_Form\Frm_Manage_Employee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows_Form\Frm_Manage_Employee.Designer.cs">
+      <DependentUpon>Frm_Manage_Employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows_Form\Frm_Manage_Order.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows_Form\Frm_Manage_Order.Designer.cs">
+      <DependentUpon>Frm_Manage_Order.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows_Form\Frm_Product.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows_Form\Frm_Product.Designer.cs">
+      <DependentUpon>Frm_Product.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows_Form\Frm_Product_Rates.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows_Form\Frm_Product_Rates.Designer.cs">
+      <DependentUpon>Frm_Product_Rates.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows_Form\Frm_Search_Customer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows_Form\Frm_Search_Customer.Designer.cs">
+      <DependentUpon>Frm_Search_Customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows_Form\Frm_Splash_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows_Form\Frm_Splash_Form.Designer.cs">
+      <DependentUpon>Frm_Splash_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows_Form\Frm_Stock_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows_Form\Frm_Stock_Report.Designer.cs">
+      <DependentUpon>Frm_Stock_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows_Form\Frm_View_All_Stock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows_Form\Frm_View_All_Stock.Designer.cs">
+      <DependentUpon>Frm_View_All_Stock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Global_Functions.cs" />
+    <Compile Include="Global_Vars.cs" />
+    <Compile Include="Home_MDI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home_MDI.Designer.cs">
+      <DependentUpon>Home_MDI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Jewellery_Shop_Management_System_DBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Jewellery_Shop_Management_System_DBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Jewellery_Shop_Management_System_DBDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Jewellery_Shop_Management_System_DBDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Jewellery_Shop_Management_System_DBDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Jewellery_Shop_Management_System_DBDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Jewellery_Shop_Management_System_DBDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Jewellery_Shop_Management_System_DBDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Jewellery_Shop_Management_System_DBDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Jewellery_Shop_Management_System_DBDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Jewellery_Shop_Management_System_DBDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Jewellery_Shop_Management_System_DBDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="panel.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sqlconnection.cs" />
+    <EmbeddedResource Include="Crystal_Report\Customer_Report1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Customer_Report1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Crystal_Report\Datewise_Customer_Report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Datewise_Customer_Report.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Crystal_Report\Single_Distributor_Report1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Single_Distributor_Report1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Crystal_Report\Single_Employee_Report1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Single_Employee_Report1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Crystal_Report\Single_Product_Report1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Single_Product_Report1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Crystal_Report\Stock_Report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Stock_Report.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Single_Distributor_Report.resx">
+      <DependentUpon>Frm_Single_Distributor_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows_Form\Frm_Datewise_Customer_Report.resx">
+      <DependentUpon>Frm_Datewise_Customer_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows_Form\Frm_Single_Employee_Report.resx">
+      <DependentUpon>Frm_Single_Employee_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows_Form\Frm_Single_Product_Report.resx">
+      <DependentUpon>Frm_Single_Product_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows_Form\Frm_Accept_Order.resx">
+      <DependentUpon>Frm_Accept_Order.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows_Form\Frm_Add_Distributor.resx">
+      <DependentUpon>Frm_Add_Distributor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows_Form\Frm_Add_Employee.resx">
+      <DependentUpon>Frm_Add_Employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows_Form\Frm_Add_New_Customer.resx">
+      <DependentUpon>Frm_Add_New_Customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows_Form\Frm_Add_New_Product_Category.resx">
+      <DependentUpon>Frm_Add_New_Product_Category.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows_Form\Frm_Add_New_Product_Sub_Category.resx">
+      <DependentUpon>Frm_Add_New_Product_Sub_Category.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows_Form\Frm_Add_Stock.resx">
+      <DependentUpon>Frm_Add_Stock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows_Form\Frm_Bill_Receipt.resx">
+      <DependentUpon>Frm_Bill_Receipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows_Form\Frm_Final_Customer_Report.resx">
+      <DependentUpon>Frm_Final_Customer_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows_Form\Frm_Login_Form.resx">
+      <DependentUpon>Frm_Login_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows_Form\Frm_Manage_Distributor.resx">
+      <DependentUpon>Frm_Manage_Distributor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows_Form\Frm_Manage_Employee.resx">
+      <DependentUpon>Frm_Manage_Employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows_Form\Frm_Manage_Order.resx">
+      <DependentUpon>Frm_Manage_Order.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows_Form\Frm_Product.resx">
+      <DependentUpon>Frm_Product.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows_Form\Frm_Product_Rates.resx">
+      <DependentUpon>Frm_Product_Rates.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows_Form\Frm_Search_Customer.resx">
+      <DependentUpon>Frm_Search_Customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows_Form\Frm_Splash_Form.resx">
+      <DependentUpon>Frm_Splash_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows_Form\Frm_Stock_Report.resx">
+      <DependentUpon>Frm_Stock_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows_Form\Frm_View_All_Stock.resx">
+      <DependentUpon>Frm_View_All_Stock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home_MDI.resx">
+      <DependentUpon>Home_MDI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Data_Sets\Datewise_Customer_DataSet.xsc">
+      <DependentUpon>Datewise_Customer_DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Data_Sets\Datewise_Customer_DataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Datewise_Customer_DataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Data_Sets\Datewise_Customer_DataSet.xss">
+      <DependentUpon>Datewise_Customer_DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Data_Sets\Single_Distributor_Data_Set1.xsc">
+      <DependentUpon>Single_Distributor_Data_Set1.xsd</DependentUpon>
+    </None>
+    <None Include="Data_Sets\Single_Distributor_Data_Set1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Single_Distributor_Data_Set1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Data_Sets\Single_Distributor_Data_Set1.xss">
+      <DependentUpon>Single_Distributor_Data_Set1.xsd</DependentUpon>
+    </None>
+    <None Include="Data_Sets\Customer_Details_DataSet.xsc">
+      <DependentUpon>Customer_Details_DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Data_Sets\Customer_Details_DataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Customer_Details_DataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Data_Sets\Customer_Details_DataSet.xss">
+      <DependentUpon>Customer_Details_DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Data_Sets\Single_Employee_Data_Set.xsc">
+      <DependentUpon>Single_Employee_Data_Set.xsd</DependentUpon>
+    </None>
+    <None Include="Data_Sets\Single_Employee_Data_Set.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Single_Employee_Data_Set.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Data_Sets\Single_Employee_Data_Set.xss">
+      <DependentUpon>Single_Employee_Data_Set.xsd</DependentUpon>
+    </None>
+    <None Include="Data_Sets\Single_Product_Data_Set.xsc">
+      <DependentUpon>Single_Product_Data_Set.xsd</DependentUpon>
+    </None>
+    <None Include="Data_Sets\Single_Product_Data_Set.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Single_Product_Data_Set.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Data_Sets\Single_Product_Data_Set.xss">
+      <DependentUpon>Single_Product_Data_Set.xsd</DependentUpon>
+    </None>
+    <None Include="Data_Sets\Stock_Data_Set.xsc">
+      <DependentUpon>Stock_Data_Set.xsd</DependentUpon>
+    </None>
+    <None Include="Data_Sets\Stock_Data_Set.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Stock_Data_Set.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Data_Sets\Stock_Data_Set.xss">
+      <DependentUpon>Stock_Data_Set.xsd</DependentUpon>
+    </None>
+    <None Include="Jewellery_Shop_Management_System_DBDataSet.xsc">
+      <DependentUpon>Jewellery_Shop_Management_System_DBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Jewellery_Shop_Management_System_DBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Jewellery_Shop_Management_System_DBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Jewellery_Shop_Management_System_DBDataSet.xss">
+      <DependentUpon>Jewellery_Shop_Management_System_DBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Jewellery_Shop_Management_System_DBDataSet1.xsc">
+      <DependentUpon>Jewellery_Shop_Management_System_DBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Jewellery_Shop_Management_System_DBDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Jewellery_Shop_Management_System_DBDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Jewellery_Shop_Management_System_DBDataSet1.xss">
+      <DependentUpon>Jewellery_Shop_Management_System_DBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Jewellery_Shop_Management_System_DBDataSet2.xsc">
+      <DependentUpon>Jewellery_Shop_Management_System_DBDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Jewellery_Shop_Management_System_DBDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Jewellery_Shop_Management_System_DBDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Jewellery_Shop_Management_System_DBDataSet2.xss">
+      <DependentUpon>Jewellery_Shop_Management_System_DBDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Jewellery_Shop_Management_System_DBDataSet3.xsc">
+      <DependentUpon>Jewellery_Shop_Management_System_DBDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="Jewellery_Shop_Management_System_DBDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Jewellery_Shop_Management_System_DBDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Jewellery_Shop_Management_System_DBDataSet3.xss">
+      <DependentUpon>Jewellery_Shop_Management_System_DBDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="Jewellery_Shop_Management_System_DBDataSet4.xsc">
+      <DependentUpon>Jewellery_Shop_Management_System_DBDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="Jewellery_Shop_Management_System_DBDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Jewellery_Shop_Management_System_DBDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Jewellery_Shop_Management_System_DBDataSet4.xss">
+      <DependentUpon>Jewellery_Shop_Management_System_DBDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="Jewellery_Shop_Management_System_DBDataSet5.xsc">
+      <DependentUpon>Jewellery_Shop_Management_System_DBDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="Jewellery_Shop_Management_System_DBDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Jewellery_Shop_Management_System_DBDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Jewellery_Shop_Management_System_DBDataSet5.xss">
+      <DependentUpon>Jewellery_Shop_Management_System_DBDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jewellery-gold-wedding-indian.jpg" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
